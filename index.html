@@ -2,9 +2,433 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Zome HP</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+  name="description"
+  content="atelier Rombusは、Zome建築・木工・茅葺きを通して、自然と人が調和するものづくりを行っています。"
+>
+
+  <title>atelier Rombus | Zome建築・木工・茅葺き</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <h1>atelier Rombus</h1>
+
+  <header class="header">
+
+    <a class="header-logo" href="#top">
+      atelier Rombus
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="global-nav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav
+      class="global-nav"
+      id="global-nav"
+      aria-label="メインナビゲーション"
+    >
+      <ul>
+        <li><a href="#profile">About</a></li>
+        <li><a href="#zome">Zome</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+
+      <img
+        class="hero-image"
+        src="images/hero-main.jpg"
+        alt="自然の中に建つ幾何学的な形状のZome建築"
+      >
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-copy">
+
+          <p class="hero-small-title">
+            atelier
+          </p>
+
+          <h1 class="hero-title">
+            Rombus
+          </h1>
+
+          <p class="hero-category">
+            Zome Architecture / Woodworks / Kayabuki
+          </p>
+
+          <p class="hero-catch">
+            自然とつながる、<br>
+            かたちをつくる。
+          </p>
+
+          <p class="hero-description">
+            自然の素材と幾何学的な構造を組み合わせ、<br>
+            暮らしと風景に溶け込む空間をつくります。
+          </p>
+
+          <a class="hero-link" href="#zome">
+            Zomeを知る
+          </a>
+
+        </div>
+
+      </div>
+
+      <a class="photo-link" href="#works">
+        View Works
+      </a>
+
+      <div class="scroll">
+        <span>Scroll</span>
+        <span class="scroll-line"></span>
+      </div>
+
+    </section>
+
+
+    <!-- Zomeとは -->
+    <section class="zome-section" id="zome">
+
+      <div class="section-inner">
+
+        <div class="zome-heading fade-up">
+
+          <p class="section-label">
+            About Zome
+          </p>
+
+          <h2 class="section-title">
+            Zomeとは
+          </h2>
+
+        </div>
+
+        <div class="zome-content">
+
+          <div class="zome-image-wrap fade-up">
+
+            <img
+              class="zome-image"
+              src="images/hero-main.jpg"
+              alt="atelier Rombusが制作するZome建築"
+            >
+
+          </div>
+
+          <div class="zome-text fade-up">
+
+            <p>
+              Zome（ゾム）は、幾何学的な形を組み合わせてつくられる、
+              有機的で美しい建築構造です。
+            </p>
+
+            <p>
+              柱に頼りすぎず、面と面が互いに支え合うことで、
+              広がりのある空間を生み出します。
+            </p>
+
+            <p>
+              atelier Rombusでは、木や茅などの自然素材と
+              Zomeの構造を掛け合わせ、周囲の風景や使う人の暮らしに
+              寄り添う建築を目指しています。
+            </p>
+
+            <a class="text-link" href="#works">
+              Worksを見る
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Works -->
+    <section class="works-section" id="works">
+
+      <div class="section-inner">
+
+        <p class="section-label fade-up">
+          Our Works
+        </p>
+
+        <h2 class="section-title fade-up">
+          Works
+        </h2>
+
+        <div class="works-grid">
+
+          <!-- Zome -->
+          <a
+            href="zome.html"
+            class="work-card fade-up"
+          >
+
+            <div class="work-card-image">
+              <img
+                src="images/hero-main.jpg"
+                alt="Zome Architecture"
+              >
+            </div>
+
+            <p class="work-number">01</p>
+
+            <h3>Zome Architecture</h3>
+
+          </a>
+
+
+          <!-- Woodworks -->
+          <a
+            href="#"
+            class="work-card fade-up"
+          >
+
+            <div class="work-card-image">
+              <img
+                src="images/hero.jpg"
+                alt="Woodworks"
+              >
+            </div>
+
+            <p class="work-number">02</p>
+
+            <h3>Woodworks</h3>
+
+          </a>
+
+
+          <!-- Kayabuki -->
+          <a
+            href="#"
+            class="work-card fade-up"
+          >
+
+            <div class="work-card-image">
+              <img
+                src="images/hero-main.jpg"
+                alt="Kayabuki"
+              >
+            </div>
+
+            <p class="work-number">03</p>
+
+            <h3>Kayabuki</h3>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Profile -->
+<section class="profile-section" id="profile">
+
+  <div class="section-inner">
+
+    <div class="profile-heading fade-up">
+
+      <p class="section-label">
+        Profile
+      </p>
+
+      <h2 class="section-title">
+        大和田 真功
+      </h2>
+
+    </div>
+
+    <div class="profile-content">
+
+      <div class="profile-image-wrap fade-up">
+
+        <img
+          class="profile-image"
+          src="images/hero-main.jpg"
+          alt="atelier Rombus代表 大和田真功"
+        >
+
+      </div>
+
+      <div class="profile-body fade-up">
+
+        <p class="profile-role">
+          atelier Rombus 代表  大和田真功
+        </p>
+
+        <p class="profile-lead">
+          自然素材と向き合い、<br>
+          暮らしに寄り添うものづくりを。
+        </p>
+
+        <p class="profile-text">
+          Zome建築・木工・茅葺きを通して、
+          自然の中に生まれる形や素材の個性を大切にした
+          ものづくりを続けています。
+        </p>
+
+        <p class="profile-text">
+          一つひとつの素材と丁寧に向き合いながら、
+          自然と人が心地よく共存できる空間づくりを目指しています。
+        </p>
+
+        <a class="text-link" href="profile.html">
+          詳しいプロフィール ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+
+      <div class="section-inner narrow fade-up">
+
+        <p class="section-label">
+          Contact
+        </p>
+
+        <h2 class="section-title">
+          お問い合わせ
+        </h2>
+
+        <p class="contact-lead">
+          制作のご相談やご依頼など、<br>
+          どうぞお気軽にお問い合わせください。
+        </p>
+
+        <p class="contact-text">
+          Zome建築・木工・茅葺きに関するご相談や、
+          制作についてのご質問を受け付けています。
+        </p>
+
+        <a
+          class="contact-button"
+          href="mailto:example@example.com"
+        >
+          Contact
+          <span aria-hidden="true">→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <p>
+      <small>&copy; 2026 atelier Rombus</small>
+    </p>
+
+  </footer>
+
+
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const globalNav = document.querySelector(".global-nav");
+    const navLinks = document.querySelectorAll(".global-nav a");
+
+    if (menuButton && globalNav) {
+      menuButton.addEventListener("click", () => {
+        const isOpen =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(!isOpen)
+        );
+
+        globalNav.classList.toggle("is-open");
+        menuButton.classList.toggle("is-open");
+      });
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        menuButton?.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        globalNav?.classList.remove("is-open");
+        menuButton?.classList.remove("is-open");
+      });
+    });
+
+
+    const fadeElements =
+      document.querySelectorAll(".fade-up");
+
+    const fadeObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    fadeElements.forEach((element) => {
+      fadeObserver.observe(element);
+    });
+  </script>
+
 </body>
 </html>
