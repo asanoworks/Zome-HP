@@ -68,12 +68,33 @@
     <!-- Hero -->
     <section class="hero" id="top">
 
-      <img
-        class="hero-image"
-        src="images/hero-main.jpg"
-        alt="自然の中に建つ幾何学的な形状のZome建築"
-      >
+      <div class="hero-slides">
 
+  <img
+  class="hero-image hero-image-zome is-active"
+  src="images/hero-main.jpg"
+  alt="自然の中に建つ幾何学的な形状のZome建築"
+>
+
+  <img
+    class="hero-image"
+    src="images/works-woodworks.jpg"
+    alt="atelier Rombusの木工作品"
+  >
+
+  <img
+    class="hero-image"
+    src="images/works-kayabuki.jpg"
+    alt="atelier Rombusの茅葺き"
+  >
+
+     </div>
+       <div class="hero-dots" aria-hidden="true">
+       <span class="hero-dot is-active"></span>
+       <span class="hero-dot"></span>
+       <span class="hero-dot"></span>
+     
+      </div>
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
@@ -441,6 +462,25 @@ window.addEventListener("scroll", updateHeaderColor);
 window.addEventListener("resize", updateHeaderColor);
 
 updateHeaderColor();
+
+const heroImages = document.querySelectorAll(".hero-image");
+const heroDots = document.querySelectorAll(".hero-dot");
+
+let currentHeroIndex = 0;
+
+if (heroImages.length > 1) {
+  setInterval(() => {
+    heroImages[currentHeroIndex].classList.remove("is-active");
+    heroDots[currentHeroIndex]?.classList.remove("is-active");
+
+    currentHeroIndex =
+      (currentHeroIndex + 1) % heroImages.length;
+
+    heroImages[currentHeroIndex].classList.add("is-active");
+    heroDots[currentHeroIndex]?.classList.add("is-active");
+  }, 5000);
+}
+
   </script>
 
 </body>
