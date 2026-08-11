@@ -28,26 +28,40 @@
 
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
+<header class="header">
 
-      <a href="index.html" class="logo">
-        atelier Rombus
-      </a>
+  <a class="header-logo" href="index.html">
+    atelier Rombus
+  </a>
 
-      <nav class="nav">
-        <a href="index.html#about">About</a>
-        <a href="index.html#works">Works</a>
-        <a href="profile.html">Profile</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <button
+    class="menu-button"
+    type="button"
+    aria-label="メニューを開く"
+    aria-expanded="false"
+    aria-controls="global-nav"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-    </div>
-  </header>
+  <nav
+    class="global-nav"
+    id="global-nav"
+    aria-label="メインナビゲーション"
+  >
+    <ul>
+      <li><a href="index.html#zome">About Zome</a></li>
+      <li><a href="index.html#works">Works</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
+</header>
 
-  <main>
+<main>
 
     <!-- Woodworks Intro -->
     <section class="zome-intro">
@@ -135,6 +149,33 @@
 
     </div>
   </footer>
+<script>
+  const menuButton = document.querySelector(".menu-button");
+  const globalNav = document.querySelector(".global-nav");
+  const navLinks = document.querySelectorAll(".global-nav a");
 
+  if (menuButton && globalNav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
+      globalNav.classList.toggle("is-open");
+      menuButton.classList.toggle("is-open");
+    });
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menuButton?.setAttribute("aria-expanded", "false");
+      globalNav?.classList.remove("is-open");
+      menuButton?.classList.remove("is-open");
+    });
+  });
+</script>
 </body>
 </html>
