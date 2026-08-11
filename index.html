@@ -53,11 +53,10 @@
       aria-label="メインナビゲーション"
     >
       <ul>
-        <li><a href="#profile">About</a></li>
-        <li><a href="#zome">Zome</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#contact">Contact</a></li>
+          <li><a href="#zome">About Zome</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -219,7 +218,7 @@
 
 
           <!-- Woodworks -->
-          <div class="work-card fade-up">
+          <a href="woodworks.html" class="work-card fade-up">
 
             <div class="work-card-image">
               <img
@@ -232,11 +231,11 @@
 
             <h3>Woodworks</h3>
 
-          </div>
+          </a>
 
 
           <!-- Kayabuki -->
-          <div class="work-card fade-up">
+          <a href="kayabuki.html" class="work-card fade-up">
 
             <div class="work-card-image">
               <img
@@ -249,7 +248,7 @@
 
             <h3>Kayabuki</h3>
 
-          </div>
+          </a>
 
         </div>
 
@@ -345,12 +344,9 @@
           制作についてのご質問を受け付けています。
         </p>
 
-        <a
-          class="contact-button"
-          href="mailto:example@example.com"
-        >
-          Contact
-          <span aria-hidden="true">→</span>
+        <a class="contact-button" href="contact.html">
+         Contact
+        <span aria-hidden="true">→</span>
         </a>
 
       </div>
@@ -421,7 +417,30 @@
 
     fadeElements.forEach((element) => {
       fadeObserver.observe(element);
-    });
+    });const header = document.querySelector(".header");
+
+const darkHeaderSections = [
+  document.querySelector("#zome"),
+  document.querySelector("#profile"),
+  document.querySelector("#contact")
+].filter(Boolean);
+
+const updateHeaderColor = () => {
+  const headerY = 120;
+
+  const shouldBeDark = darkHeaderSections.some((section) => {
+    const rect = section.getBoundingClientRect();
+
+    return rect.top <= headerY && rect.bottom >= headerY;
+  });
+
+  header?.classList.toggle("is-dark", shouldBeDark);
+};
+
+window.addEventListener("scroll", updateHeaderColor);
+window.addEventListener("resize", updateHeaderColor);
+
+updateHeaderColor();
   </script>
 
 </body>

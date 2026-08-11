@@ -63,29 +63,49 @@ button {
 ========================= */
 
 .header {
-  position: fixed;
-  top: 36px;
-  left: 36px;
-  z-index: 100;
+  top: 16px;
+  right: 16px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 14px;
+
+  background: rgba(23, 23, 20, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
   color: var(--color-white);
+  text-shadow: none;
+}
+
+.header.is-dark {
+  color: var(--color-white);
+}
+
+.header.is-dark .menu-button span {
+  background: var(--color-white);
 }
 
 .header-logo {
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 14px;
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 .global-nav a {
   display: block;
-  padding: 1px 0;
+  padding: 4px 0;
   font-family: var(--font-serif);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   transition: opacity 0.3s ease;
 }
 
@@ -95,6 +115,11 @@ button {
 
 .menu-button {
   display: none;
+}
+
+.header.is-dark {
+  color: #222;
+  text-shadow: none;
 }
 
 
@@ -830,5 +855,419 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(0,0,0,.18);
 }
+
+}
+/* ==============================
+   Zome Detail
+============================== */
+
+.zome-intro {
+  padding: 140px 24px 80px;
+}
+
+.zome-intro .section-inner,
+.zome-gallery .section-inner {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.zome-intro h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.zome-lead {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.zome-text {
+  max-width: 700px;
+  line-height: 2;
+}
+
+
+/* Gallery */
+
+.zome-gallery {
+  padding: 40px 24px 120px;
+}
+/* Zome Structure */
+
+.zome-structure {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.zome-structure-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.zome-structure-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.zome-structure-text p {
+  line-height: 2;
+}
+
+
+@media (max-width: 768px) {
+
+  .zome-structure {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 80px;
+  }
+
+}
+
+.gallery-wide {
+  margin-bottom: 80px;
+}
+
+.gallery-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.gallery-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e5dc;
+  color: #777;
+  font-size: 14px;
+}
+.gallery-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Smartphone */
+
+@media (max-width: 768px) {
+
+  .zome-intro {
+    padding: 110px 20px 60px;
+  }
+
+  .zome-intro h1 {
+    font-size: 36px;
+  }
+
+  .gallery-pair {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .gallery-wide {
+    margin-bottom: 48px;
+  }
+
+  .zome-gallery {
+    padding: 20px 20px 80px;
+  }
+
+}
+/* ========================================
+   Woodworks
+======================================== */
+
+.woodworks-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+.woodworks-item {
+  width: 100%;
+}
+
+.woodworks-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.zome-gallery .gallery-wide {
+  margin-bottom: 72px;
+}
+
+.zome-gallery .gallery-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Woodworks Smartphone */
+@media (max-width: 768px) {
+
+  .woodworks-pair {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  .zome-gallery .gallery-wide {
+    margin-bottom: 48px;
+  }
+
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+
+  .woodworks-pair {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+}
+/* ========================================
+   Woodworks
+======================================== */
+
+.woodworks-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 72px;
+}
+
+.woodworks-item {
+  width: 100%;
+}
+
+.woodworks-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.zome-gallery .gallery-wide {
+  margin-bottom: 72px;
+}
+
+.zome-gallery .gallery-wide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Woodworks Smartphone */
+@media (max-width: 768px) {
+
+  .woodworks-pair {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  .zome-gallery .gallery-wide {
+    margin-bottom: 48px;
+  }
+
+}
+/* ========================================
+   Profile
+======================================== */
+
+.profile-section {
+  padding: 20px 0 120px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.profile-placeholder {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e6df;
+  color: #777;
+  font-family: var(--font-serif);
+  letter-spacing: 0.15em;
+  font-size: 14px;
+}
+
+.profile-content h2 {
+  margin: 16px 0 8px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.profile-role {
+  margin-bottom: 32px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.profile-text p {
+  margin-bottom: 20px;
+}
+
+.profile-note {
+  margin-top: 28px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+
+/* Profile Smartphone */
+@media (max-width: 768px) {
+
+  .profile-section {
+    padding: 20px 20px 80px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .profile-placeholder {
+    height: 360px;
+  }
+
+  .profile-content h2 {
+    font-size: 30px;
+  }
+
+}
+/* ========================================
+   Contact
+======================================== */
+
+.contact-page {
+  padding: 80px 0 120px;
+  background: var(--color-bg);
+  background-image: none;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.contact-form {
+  max-width: 720px;
+  margin: 0;
+}
+
+.contact-form,
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  color: var(--color-text);
+}
+
+.form-group {
+  margin-bottom: 40px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid rgba(36, 36, 31, 0.35);
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--color-text);
+}
+
+.form-submit {
+  margin-top: 48px;
+}
+
+.form-submit button {
+  min-width: 160px;
+  padding: 14px 32px;
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-submit button:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+
+/* Contact Smartphone */
+@media (max-width: 768px) {
+
+  .contact-page {
+  padding: 20px 20px 80px;
+}
+
+  .form-group {
+    margin-bottom: 32px;
+  }
+
+  .form-submit button {
+    width: 100%;
+  }
 
 }
