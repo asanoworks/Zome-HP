@@ -225,7 +225,7 @@ button {
 .hero-title {
   margin: 0 0 26px;
   font-family: var(--font-serif);
-  font-size: clamp(72px, 9vw, 138px);
+  font-size: clamp(72px, 9vw, 126px);
   font-weight: 300;
   line-height: 0.84;
   letter-spacing: -0.04em;
@@ -811,7 +811,7 @@ button {
 
   .hero-title {
   margin-bottom: 22px;
-  font-size: clamp(60px, 19vw, 86px);
+  font-size: clamp(54px, 16vw, 72px);
 }
 
   .hero-category {
