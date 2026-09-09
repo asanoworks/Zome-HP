@@ -155,6 +155,9 @@ button {
   opacity: 0;
   transition: opacity 1.5s ease;
 }
+.hero-image[src*="top_slide_02.jpg"] {
+  object-position: center 20%;
+}
 
 .hero-image.is-active {
   opacity: 1;
@@ -372,7 +375,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   align-items: center;
-  gap: clamp(40px, 7vw, 100px);
+  gap: clamp(40px, 5vw, 70px);
 }
 
 .zome-image-wrap {
@@ -381,12 +384,11 @@ button {
 }
 
 .zome-image {
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .zome-text {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .zome-text p {
@@ -490,6 +492,22 @@ button {
   font-family: "Cormorant Garamond", serif;
   font-size: 38px;
   text-decoration: none;
+}
+
+.works-link span:last-child {
+  transition: transform 0.3s ease;
+}
+
+.works-link:hover span:last-child {
+  transform: translateX(10px);
+}
+
+.works-link {
+  transition: transform 0.3s ease;
+}
+
+.works-link:hover {
+  transform: translateX(6px);
 }
 
 /* =========================
@@ -923,6 +941,7 @@ button {
 .works-marquee {
   padding: 18px 0;
 }
+
 }
 /* ==============================
    Zome Detail
